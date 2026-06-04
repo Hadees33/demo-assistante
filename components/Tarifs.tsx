@@ -1,3 +1,5 @@
+import { IconCheck } from './icons'
+
 const PLANS = [
   {
     name: 'Ponctuel',
@@ -67,7 +69,7 @@ export default function Tarifs() {
               </div>
               <ul className="tarif-feats">
                 {p.feats.map((f) => (
-                  <li key={f}><span className="ic">✓</span> {f}</li>
+                  <li key={f}><span className="ic"><IconCheck size={15} /></span> {f}</li>
                 ))}
               </ul>
               <a href="/#contact" className={`btn ${p.pop ? 'btn-white' : 'btn-dark'}`}>{p.cta}</a>

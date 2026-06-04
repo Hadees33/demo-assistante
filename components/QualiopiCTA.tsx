@@ -1,3 +1,5 @@
+import { IconCheck, IconArrowRight } from './icons'
+
 export default function QualiopiCTA() {
   return (
     <section className="section section-navy qualiopi-feature" id="qualiopi">
@@ -14,19 +16,19 @@ export default function QualiopiCTA() {
           </p>
           <ul className="qf-list">
             <li>
-              <span className="ic">✓</span>
+              <span className="ic"><IconCheck size={14} /></span>
               <span><b>Tous les indicateurs couverts</b> — objectifs, prérequis, modalités, évaluation, accessibilité handicap.</span>
             </li>
             <li>
-              <span className="ic">✓</span>
+              <span className="ic"><IconCheck size={14} /></span>
               <span><b>À votre charte</b> — des fiches claires et homogènes pour tout votre catalogue.</span>
             </li>
             <li>
-              <span className="ic">✓</span>
+              <span className="ic"><IconCheck size={14} /></span>
               <span><b>Prêtes pour l&apos;audit</b> — relues, conformes et livrées en PDF.</span>
             </li>
           </ul>
-          <a href="/qualiopi" className="btn btn-primary btn-lg">Découvrir mon accompagnement</a>
+          <a href="/qualiopi" className="btn btn-primary btn-lg">Découvrir mon accompagnement <IconArrowRight size={17} /></a>
         </div>
 
         {/* Exemple de fiche (visuel de mise en valeur, pas un outil) */}
@@ -43,9 +45,9 @@ export default function QualiopiCTA() {
           <div className="qf-mock-row"><span className="k">Durée</span><span className="v">14 h — 2 jours</span></div>
           <div className="qf-mock-row"><span className="k">Tarif</span><span className="v">980 € net de taxes / participant</span></div>
           <div className="qf-mock-foot">
-            <span className="qf-mock-chip">✓ Accessibilité handicap</span>
-            <span className="qf-mock-chip">✓ Modalités d&apos;évaluation</span>
-            <span className="qf-mock-chip">✓ Délais d&apos;accès</span>
+            <span className="qf-mock-chip"><IconCheck size={11} /> Accessibilité handicap</span>
+            <span className="qf-mock-chip"><IconCheck size={11} /> Modalités d&apos;évaluation</span>
+            <span className="qf-mock-chip"><IconCheck size={11} /> Délais d&apos;accès</span>
           </div>
         </div>
       </div>

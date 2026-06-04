@@ -142,9 +142,12 @@ input, textarea, select { font-family: inherit; }
   padding: 14px 0;
 }
 .header-inner { max-width: 1180px; margin: 0 auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; }
-.header-logo { font-family: var(--font-serif); font-size: 25px; font-weight: 600; color: var(--ink); line-height: 1; position: relative; display: flex; align-items: baseline; gap: 2px; }
-.header-logo span.dot { color: var(--teal); }
-.header-logo-sub { position: absolute; top: 100%; left: 2px; margin-top: 3px; font-family: var(--font-sans); font-size: 9.5px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+.header-logo { display: flex; align-items: center; gap: 11px; line-height: 1; }
+.header-mark { color: var(--teal); display: inline-flex; }
+.header-logo-text { display: flex; flex-direction: column; gap: 3px; }
+.header-word { font-family: var(--font-serif); font-size: 24px; font-weight: 600; color: var(--ink); line-height: 1; }
+.header-logo .dot { color: var(--teal); }
+.header-logo-sub { font-family: var(--font-sans); font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); line-height: 1; }
 .header-nav { display: flex; align-items: center; gap: 30px; }
 .header-nav a { font-size: 14.5px; font-weight: 500; color: var(--text); transition: color .2s; }
 .header-nav a:hover { color: var(--teal-deep); }
@@ -444,3 +447,59 @@ input, textarea, select { font-family: inherit; }
 .qpage-cta { text-align: center; }
 .qpage-cta .heading { margin-bottom: 16px; }
 @media (max-width: 940px) { .qpage-intro { padding-top: 118px; } }
+
+/* ═══════════════════════════════════════════════════════
+   FINITIONS — détails qui cassent le look « template »
+   ═══════════════════════════════════════════════════════ */
+
+/* Icônes : la flèche des CTA avance au survol */
+.btn svg { flex-shrink: 0; transition: transform .25s var(--ease); }
+.btn:hover svg { transform: translateX(3px); }
+
+/* Monogramme du footer */
+.footer-logo { display: inline-flex; align-items: center; gap: 10px; }
+.footer-mark { color: var(--teal); display: inline-flex; }
+
+/* Pastille « Disponible » pulsée (carte hero) */
+.hero-card-badge { display: inline-flex; align-items: center; gap: 6px; }
+.pulse-dot { width: 7px; height: 7px; border-radius: 50%; background: #2BB673; box-shadow: 0 0 0 3px rgba(43,182,115,0.18); animation: pulse 1.8s infinite; }
+
+/* Étoile dorée du badge flottant */
+.hero-float .ic.gold { background: #FBF1D8; color: #D9A82B; }
+
+/* Icône dans le <b> des pills de fiche + chips */
+.fiche-pill b { display: inline-flex; align-items: center; color: var(--teal-deep); }
+.qf-mock-chip { display: inline-flex; align-items: center; gap: 5px; }
+.tarif-feats .ic { display: inline-flex; }
+
+/* Guillemet décoratif + étoiles vectorielles des témoignages */
+.testi-card { position: relative; overflow: hidden; }
+.testi-quote { position: absolute; top: 16px; right: 18px; color: var(--teal); opacity: 0.13; }
+.testi-stars { display: inline-flex; gap: 3px; color: #E8B84B; margin-bottom: 16px; letter-spacing: 0; }
+
+/* Texture : trame de points discrète dans le hero */
+.hero-dots {
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(18,153,138,0.13) 1px, transparent 1.5px);
+  background-size: 24px 24px;
+  -webkit-mask-image: radial-gradient(ellipse 65% 55% at 72% 32%, #000, transparent 72%);
+          mask-image: radial-gradient(ellipse 65% 55% at 72% 32%, #000, transparent 72%);
+}
+.hero-grid { z-index: 1; }
+
+/* Texture : trame fine sur les sections sombres */
+.section-navy::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1.4px);
+  background-size: 26px 26px;
+  -webkit-mask-image: linear-gradient(180deg, #000, transparent 78%);
+          mask-image: linear-gradient(180deg, #000, transparent 78%);
+}
+.section-navy > .container { position: relative; z-index: 1; }
+
+/* Grain « papier » très léger sur tout le site (anti-aplat) */
+body::after {
+  content: ''; position: fixed; inset: 0; z-index: 9999; pointer-events: none;
+  opacity: 0.035; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}

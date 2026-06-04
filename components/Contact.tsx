@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { IconMail, IconPhone, IconPin, IconCheckCircle, IconArrowRight } from './icons'
 
 export default function Contact() {
   const [sent, setSent] = useState(false)
@@ -16,21 +17,21 @@ export default function Contact() {
           </p>
           <div className="contact-info">
             <div className="contact-item">
-              <span className="ic">✉️</span>
+              <span className="ic"><IconMail size={19} /></span>
               <div>
                 <div className="k">Email</div>
                 <div className="v">contact@clea-assistante.fr</div>
               </div>
             </div>
             <div className="contact-item">
-              <span className="ic">📞</span>
+              <span className="ic"><IconPhone size={19} /></span>
               <div>
                 <div className="k">Téléphone</div>
                 <div className="v">06 12 34 56 78</div>
               </div>
             </div>
             <div className="contact-item">
-              <span className="ic">📍</span>
+              <span className="ic"><IconPin size={19} /></span>
               <div>
                 <div className="k">Zone d&apos;intervention</div>
                 <div className="v">Toute la France — 100&nbsp;% à distance</div>
@@ -48,7 +49,9 @@ export default function Contact() {
         >
           {sent ? (
             <div style={{ textAlign: 'center', padding: '40px 10px' }}>
-              <div style={{ fontSize: 44, marginBottom: 12 }}>✅</div>
+              <div style={{ color: 'var(--teal)', marginBottom: 14, display: 'flex', justifyContent: 'center' }}>
+                <IconCheckCircle size={52} />
+              </div>
               <h3 style={{ fontFamily: 'var(--font-serif)', fontSize: 24, color: 'var(--ink)', marginBottom: 8 }}>
                 Message bien reçu&nbsp;!
               </h3>
@@ -90,7 +93,7 @@ export default function Contact() {
                 <textarea rows={4} placeholder="Décrivez votre besoin en quelques mots…" />
               </div>
               <button type="submit" className="btn btn-primary btn-lg" style={{ width: '100%' }}>
-                Envoyer ma demande
+                Envoyer ma demande <IconArrowRight size={17} />
               </button>
             </>
           )}

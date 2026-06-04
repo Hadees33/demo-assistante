@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import {
+  IconFiche, IconShieldCheck, IconFolderCheck, IconUsers, IconChart, IconRefresh,
+  IconClock, IconPin, IconEuro, IconCheck, IconArrowRight,
+} from '@/components/icons'
 
 export const metadata: Metadata = {
   title: 'Accompagnement Qualiopi — Cléa, assistante administrative',
@@ -27,7 +31,7 @@ export default function QualiopiPage() {
               obligatoire — pour que vous abordiez votre audit l&apos;esprit tranquille.
             </p>
             <div className="hero-actions" style={{ marginTop: 34, marginBottom: 0 }}>
-              <a href="/#contact" className="btn btn-primary btn-lg">Demander un devis gratuit</a>
+              <a href="/#contact" className="btn btn-primary btn-lg">Demander un devis gratuit <IconArrowRight size={17} /></a>
               <a href="/#services" className="btn btn-ghost btn-lg">Mes autres services</a>
             </div>
           </div>
@@ -46,9 +50,9 @@ export default function QualiopiPage() {
             <div className="qf-mock-row"><span className="k">Durée</span><span className="v">14 h — 2 jours</span></div>
             <div className="qf-mock-row"><span className="k">Tarif</span><span className="v">980 € net de taxes / participant</span></div>
             <div className="qf-mock-foot">
-              <span className="qf-mock-chip">✓ Accessibilité handicap</span>
-              <span className="qf-mock-chip">✓ Modalités d&apos;évaluation</span>
-              <span className="qf-mock-chip">✓ Délais d&apos;accès</span>
+              <span className="qf-mock-chip"><IconCheck size={11} /> Accessibilité handicap</span>
+              <span className="qf-mock-chip"><IconCheck size={11} /> Modalités d&apos;évaluation</span>
+              <span className="qf-mock-chip"><IconCheck size={11} /> Délais d&apos;accès</span>
             </div>
           </div>
         </div>
@@ -67,37 +71,37 @@ export default function QualiopiPage() {
           </div>
           <div className="services-grid">
             <div className="service-card featured">
-              <div className="service-icon">📋</div>
+              <div className="service-icon"><IconFiche size={25} /></div>
               <h3>Rédaction des fiches</h3>
               <p>Je rédige vos fiches de formation, claires et homogènes, en couvrant tous les indicateurs : objectifs, prérequis, modalités, évaluation, accessibilité.</p>
               <span className="service-tag">Le cœur du métier</span>
             </div>
             <div className="service-card">
-              <div className="service-icon">✅</div>
+              <div className="service-icon"><IconShieldCheck size={25} /></div>
               <h3>Mise en conformité</h3>
               <p>J&apos;audite vos fiches existantes, je corrige les manques et je les aligne sur les 32 indicateurs du Référentiel National Qualité.</p>
               <span className="service-tag">Avant l&apos;audit</span>
             </div>
             <div className="service-card">
-              <div className="service-icon">🗂️</div>
+              <div className="service-icon"><IconFolderCheck size={25} /></div>
               <h3>Dossier d&apos;audit</h3>
               <p>Je prépare et j&apos;organise les preuves attendues pour vos audits initial et de surveillance. Vous arrivez serein le jour J.</p>
               <span className="service-tag">Certification</span>
             </div>
             <div className="service-card">
-              <div className="service-icon">👥</div>
+              <div className="service-icon"><IconUsers size={25} /></div>
               <h3>Suivi des apprenants</h3>
               <p>Conventions, convocations, émargements, attestations, questionnaires de satisfaction : tout le cycle administratif d&apos;une session.</p>
               <span className="service-tag">Au quotidien</span>
             </div>
             <div className="service-card">
-              <div className="service-icon">📊</div>
+              <div className="service-icon"><IconChart size={25} /></div>
               <h3>Indicateurs &amp; BPF</h3>
               <p>Je consolide vos taux de satisfaction et de réussite et je prépare votre Bilan Pédagogique et Financier pour vos financeurs.</p>
               <span className="service-tag">Reporting</span>
             </div>
             <div className="service-card">
-              <div className="service-icon">🔄</div>
+              <div className="service-icon"><IconRefresh size={25} /></div>
               <h3>Veille réglementaire</h3>
               <p>Le référentiel évolue : je vous alerte sur les nouveautés et je maintiens vos documents à jour, sans que vous ayez à y penser.</p>
               <span className="service-tag">Tranquillité</span>
@@ -134,10 +138,10 @@ export default function QualiopiPage() {
             <div className="fiche-sub">Attestation de fin de formation + attestation de réussite</div>
 
             <div className="fiche-pills">
-              <span className="fiche-pill"><b>⏱</b> 14 h · 2 jours</span>
-              <span className="fiche-pill"><b>📍</b> Présentiel ou classe virtuelle</span>
-              <span className="fiche-pill"><b>👥</b> 4 à 8 participants</span>
-              <span className="fiche-pill"><b>💶</b> 980 € net de taxes</span>
+              <span className="fiche-pill"><b><IconClock size={13} /></b> 14 h · 2 jours</span>
+              <span className="fiche-pill"><b><IconPin size={13} /></b> Présentiel ou classe virtuelle</span>
+              <span className="fiche-pill"><b><IconUsers size={13} /></b> 4 à 8 participants</span>
+              <span className="fiche-pill"><b><IconEuro size={13} /></b> 980 € net de taxes</span>
             </div>
 
             <div className="fiche-block">
@@ -213,7 +217,7 @@ export default function QualiopiPage() {
           <p className="subheading" style={{ margin: '0 auto 32px' }}>
             Décrivez-moi votre besoin : je vous réponds sous 24&nbsp;h avec un devis clair et sans engagement.
           </p>
-          <a href="/#contact" className="btn btn-primary btn-lg">Demander un devis gratuit</a>
+          <a href="/#contact" className="btn btn-primary btn-lg">Demander un devis gratuit <IconArrowRight size={17} /></a>
         </div>
       </section>
 

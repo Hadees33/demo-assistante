@@ -1,3 +1,5 @@
+import { IconStar, IconQuote } from './icons'
+
 const TESTIS = [
   {
     text: "Cléa a repris toutes nos fiches de formation avant l'audit de surveillance. Zéro non-conformité. Je ne pourrais plus m'en passer.",
@@ -30,8 +32,11 @@ export default function Temoignages() {
         <div className="testi-grid">
           {TESTIS.map((t) => (
             <div className="testi-card" key={t.name}>
-              <div className="testi-stars">★★★★★</div>
-              <p className="testi-text">&ldquo;{t.text}&rdquo;</p>
+              <span className="testi-quote"><IconQuote size={28} /></span>
+              <div className="testi-stars">
+                {[0, 1, 2, 3, 4].map((i) => <IconStar key={i} size={15} />)}
+              </div>
+              <p className="testi-text">{t.text}</p>
               <div className="testi-author">
                 <div className="testi-avatar">{t.initials}</div>
                 <div>

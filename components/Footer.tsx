@@ -1,10 +1,12 @@
+import { Monogram } from './icons'
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container">
         <div className="footer-grid">
           <div>
-            <div className="footer-logo">Cléa<span>.</span></div>
+            <div className="footer-logo"><span className="footer-mark"><Monogram size={30} /></span> Cléa<span>.</span></div>
             <p className="footer-about">
               Assistante administrative indépendante, spécialisée dans l&apos;accompagnement
               des organismes de formation et la conformité Qualiopi.

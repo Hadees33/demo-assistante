@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import { Monogram } from './icons'
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -24,8 +25,11 @@ export default function Header() {
       <header className={`header${scrolled ? ' scrolled' : ''}`}>
         <div className="header-inner">
           <a href="/" className="header-logo">
-            Cléa<span className="dot">.</span>
-            <span className="header-logo-sub">Assistanat &amp; Qualiopi</span>
+            <span className="header-mark"><Monogram size={30} /></span>
+            <span className="header-logo-text">
+              <span className="header-word">Cléa<span className="dot">.</span></span>
+              <span className="header-logo-sub">Assistanat &amp; Qualiopi</span>
+            </span>
           </a>
           <nav className="header-nav">
             {links.map((l) => (

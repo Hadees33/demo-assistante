@@ -1,37 +1,48 @@
-const SERVICES = [
+import { IconFiche, IconInvoice, IconCalendar, IconSpark, IconUsers, IconChart } from './icons'
+import type { ComponentType } from 'react'
+
+type Service = {
+  Icon: ComponentType<{ size?: number }>
+  title: string
+  text: string
+  tag: string
+  featured?: boolean
+}
+
+const SERVICES: Service[] = [
   {
-    icon: '📋',
+    Icon: IconFiche,
     title: 'Fiches & dossiers Qualiopi',
     text: "Rédaction de vos fiches de formation conformes aux 32 indicateurs, préparation des dossiers d'audit (initial et de surveillance), veille réglementaire.",
     tag: 'Spécialité',
     featured: true,
   },
   {
-    icon: '🧾',
+    Icon: IconInvoice,
     title: 'Facturation & relances',
     text: 'Émission de vos devis et factures, suivi des paiements, relances clients automatisées, rapprochement et tableaux de bord de trésorerie.',
     tag: 'Le plus demandé',
   },
   {
-    icon: '🗓️',
+    Icon: IconCalendar,
     title: 'Gestion administrative',
     text: 'Gestion de votre boîte mail, agenda, convocations et conventions de stage, attestations, émargements et suivi des sessions de formation.',
     tag: 'Au quotidien',
   },
   {
-    icon: '🤖',
+    Icon: IconSpark,
     title: 'Automatisations & IA',
     text: "Mise en place d'outils boostés à l'IA : génération de documents, modèles d'e-mails, classement intelligent. Vous gagnez des heures chaque semaine.",
     tag: 'Nouveauté',
   },
   {
-    icon: '👥',
+    Icon: IconUsers,
     title: 'Support stagiaires',
     text: "Accueil et suivi des apprenants, gestion des inscriptions, questionnaires de satisfaction, bilans pédagogiques et indicateurs de résultats.",
     tag: 'Relation apprenant',
   },
   {
-    icon: '📊',
+    Icon: IconChart,
     title: 'Reporting & BPF',
     text: 'Préparation du Bilan Pédagogique et Financier, suivi des indicateurs, statistiques de satisfaction et tableaux de bord pour vos financeurs.',
     tag: 'Conformité',
@@ -56,7 +67,7 @@ export default function Services() {
         <div className="services-grid">
           {SERVICES.map((s) => (
             <div className={`service-card${s.featured ? ' featured' : ''}`} key={s.title}>
-              <div className="service-icon">{s.icon}</div>
+              <div className="service-icon"><s.Icon size={25} /></div>
               <h3>{s.title}</h3>
               <p>{s.text}</p>
               <span className="service-tag">{s.tag}</span>
