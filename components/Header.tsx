@@ -13,6 +13,7 @@ export default function Header() {
   }, [])
 
   const links = [
+    { href: '/#apropos', label: 'À propos' },
     { href: '/#services', label: 'Services' },
     { href: '/#methode', label: 'Méthode' },
     { href: '/#qualiopi', label: 'Qualiopi' },

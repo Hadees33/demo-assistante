@@ -40,7 +40,10 @@ export default function Hero() {
         <div className="hero-visual">
           <div className="hero-card">
             <div className="hero-card-top">
-              <div className="hero-card-avatar">CM</div>
+              <div className="hero-card-avatar">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=120&q=80&auto=format&fit=crop" alt="Cléa Moreau" />
+              </div>
               <div>
                 <div className="hero-card-name">Cléa Moreau</div>
                 <div className="hero-card-role">Assistante administrative</div>
